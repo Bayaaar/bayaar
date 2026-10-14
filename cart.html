@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="mn">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Сагс — Уруулмэд | Захиалга өгөх</title>
+<meta name="description" content="Таны сагс — будгийн бийр, будаг, урлагийн хэрэгслийн захиалга.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Nunito:wght@400;600;700;800;900&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+<div class="topbar">🚚 50,000₮-өөс дээш захиалгад хүргэлт <strong>ҮНЭГҮЙ</strong> &nbsp;•&nbsp; 📞 8800-1234</div>
+<header class="header" id="header">
+  <div class="container header-inner">
+    <a href="index.html" class="logo"><span class="logo-icon">🎨</span><span class="logo-text">Уруулмэд<small>Хүүхдийн урлагийн дэлгүүр</small></span></a>
+    <nav class="nav" id="nav" aria-label="Үндсэн цэс">
+      <a href="index.html" class="nav-link">Нүүр</a>
+      <a href="products.html" class="nav-link">Бүтээгдэхүүн</a>
+      <a href="cart.html" class="nav-link active">Сагс</a>
+      <a href="index.html#holboo" class="nav-link">Холбоо барих</a>
+    </nav>
+    <div class="header-actions">
+      <button class="search-toggle" id="searchToggle" aria-label="Хайлт">🔍</button>
+      <button class="cart-btn" id="cartBtn" aria-label="Сагс нээх">🛒 <span class="cart-count" id="cartCount">0</span></button>
+      <button class="burger" id="burger" aria-label="Цэс" aria-expanded="false"><span></span><span></span><span></span></button>
+    </div>
+  </div>
+  <div class="search-bar" id="searchBar"><div class="container"><input type="search" id="searchInput" placeholder="Хайх: будгийн бийр, усан будаг..." autocomplete="off"><button id="searchClear" aria-label="Цэвэрлэх">✕</button></div></div>
+</header>
+<main>
+<section class="page-hero">
+  <div class="container">
+    <p class="breadcrumb"><a href="index.html">Нүүр</a> / Сагс</p>
+    <h1>🛒 Таны сагс</h1>
+    <p class="muted" id="cartPageCount">0 бараа</p>
+  </div>
+</section>
+<section class="section">
+  <div class="container cart-layout">
+    <div>
+      <div class="cart-page-list" id="cartPageItems" aria-live="polite"></div>
+      <div class="grid" id="productGrid" hidden aria-hidden="true"></div>
+      <p id="resultInfo" hidden></p>
+      <div id="emptyState" hidden></div>
+      <div style="margin-top:1rem;display:flex;gap:.6rem;flex-wrap:wrap">
+        <a class="btn btn-ghost" href="products.html">← Үргэлжлүүлэн үзэх</a>
+        <button class="danger-btn" id="cartPageClear">Сагс хоослох 🗑️</button>
+      </div>
+    </div>
+    <aside class="summary" aria-label="Захиалгын дүн">
+      <h3>📋 Захиалгын дүн</h3>
+      <div class="row"><span>Барааны дүн:</span><strong id="cartPageSubtotal">0 ₮</strong></div>
+      <div class="row"><span>Хүргэлт:</span><strong id="cartPageDelivery">0 ₮</strong></div>
+      <div class="free-hint" id="cartPageHint"></div>
+      <div class="row total"><span>Нийт төлөх:</span><strong id="cartPageTotal">0 ₮</strong></div>
+      <button class="btn btn-primary btn-block" id="cartPageOrder">Захиалга өгөх ➜</button>
+      <p class="muted" style="font-size:.82rem">50,000₮-өөс дээш захиалгад хүргэлт үнэгүй. Орон нутагт 2–5 хоногт хүргэнэ.</p>
+    </aside>
+  </div>
+</section>
+</main>
+<footer class="footer"><div class="container footer-grid"><div><div class="logo"><span class="logo-icon">🎨</span><span class="logo-text">Уруулмэд</span></div><p>Хүүхдийн бүтээлч сэтгэлгээг дэмжих монголын №1 урлагийн дэлгүүр. Бүх бүтээгдэхүүн хүүхдэд аюулгүй, баталгаатай.</p></div><div><strong>Цэс</strong><a href="index.html">Нүүр</a><a href="products.html">Бүтээгдэхүүн</a><a href="cart.html">Сагс</a><a href="index.html#holboo">Холбоо барих</a></div><div><strong>Тусламж</strong><a href="#" data-info="Хүргэлт: УБ 24 цагт (5,000₮, 50,000₮-өөс дээш үнэгүй), орон нутаг 2–5 хоног.">Хүргэлтийн нөхцөл</a><a href="#" data-info="Нээхгүй барааг 14 хоногт буцаана. Чекээ хадгална уу.">Буцаалтын журам</a><a href="#" data-info="Дансаар, картаар, бэлнээр. Байгууллагаар нэхэмжлэх гаргана.">Төлбөрийн хэлбэр</a><a href="#" data-info="Бүх бараа хоргүй гэрчилгээтэй, хүүхдэд аюулгүй.">Аюулгүй байдал</a></div><div><strong>Холбоо</strong><span>📞 8800-1234</span><span>📧 info@uruulmed.mn</span><span>📍 Улаанбаатар хот</span></div></div><div class="footer-bottom">© 2026 Уруулмэд дэлгүүр. Бүх эрх хуулиар хамгаалагдсан. • Монгол хэл дээр 🇲🇳</div></footer>
+<div class="overlay" id="cartOverlay" hidden></div>
+<aside class="drawer" id="cartDrawer" aria-label="Худалдан авалтын сагс" aria-hidden="true">
+  <div class="drawer-head"><h3>🛒 Таны сагс <span id="cartHeadCount">(0)</span></h3><button id="cartClose" aria-label="Сагс хаах">✕</button></div>
+  <div class="drawer-body" id="cartItems"></div>
+  <div class="drawer-foot"><div class="row"><span>Барааны дүн:</span><strong id="cartSubtotal">0 ₮</strong></div><div class="row"><span>Хүргэлт:</span><strong id="cartDelivery">0 ₮</strong></div><div class="free-hint" id="freeHint"></div><div class="row total"><span>Нийт төлөх:</span><strong id="cartTotal">0 ₮</strong></div><button class="btn btn-primary btn-block" id="checkoutBtn">Захиалга өгөх ➜</button><button class="btn btn-ghost btn-block" id="continueBtn">Үргэлжлүүлэн үзэх</button></div>
+</aside>
+<div class="overlay" id="modalOverlay" hidden></div>
+<div class="modal" id="productModal" role="dialog" aria-modal="true" aria-label="Бүтээгдэхүүний дэлгэрэнгүй" hidden>
+  <button class="modal-x" id="modalClose" aria-label="Хаах">✕</button>
+  <div class="modal-grid"><div class="modal-visual" id="modalVisual"><span id="modalEmoji"></span><span class="modal-badge" id="modalBadge" hidden></span><span class="zoom-hint">🔍 Томруулж үзэх</span></div>
+    <div class="modal-info"><p class="modal-cat" id="modalCat"></p><h3 id="modalName"></h3><div class="modal-rating" id="modalRating"></div>
+      <div class="modal-specs"><div><span>🎯 Нас:</span><strong id="modalAge"></strong></div><div><span>🖌️ Үсний төрөл / Материал:</span><strong id="modalMaterial"></strong></div><div><span>📦 Үлдэгдэл:</span><strong id="modalStock"></strong></div><div><span>🏷️ Ангилал:</span><strong id="modalCatName"></strong></div></div>
+      <p class="modal-desc" id="modalDesc"></p>
+      <div class="modal-price-row"><span class="price" id="modalPrice"></span><span class="old-price" id="modalOld" hidden></span></div>
+      <div class="qty-row"><span>Тоо:</span><div class="qty"><button id="qtyMinus" aria-label="Хасах">−</button><strong id="qtyVal">1</strong><button id="qtyPlus" aria-label="Нэмэх">+</button></div></div>
+      <div class="modal-btns"><button class="btn btn-primary" id="modalAdd">Сагсанд хийх 🛒</button><button class="btn btn-ghost" id="modalBuy">Шууд худалдаж авах ⚡</button></div>
+    </div>
+  </div>
+</div>
+<div class="overlay" id="orderOverlay" hidden></div>
+<div class="modal modal-sm" id="orderModal" role="dialog" aria-modal="true" aria-label="Захиалга баталгаажуулах" hidden>
+  <button class="modal-x" id="orderClose" aria-label="Хаах">✕</button>
+  <h3>📋 Захиалга баталгаажуулах</h3><p class="muted">Мэдээллээ оруулна уу — бид залгаж баталгаажуулна.</p>
+  <form id="orderForm"><div class="form-grid"><input required name="name" placeholder="Овог нэр *" minlength="2"><input required name="phone" placeholder="Утас (8 оронтой тоо) *" pattern="[0-9]{8}" title="8 оронтой тоо оруулна уу"><input name="city" placeholder="Хот / Аймаг" value="Улаанбаатар"><input name="address" placeholder="Дүүрэг, хороо, байр, орц..."></div>
+    <p class="form-label">Төлбөрийн хэлбэр:</p><div class="pay-methods"><label><input type="radio" name="pay" value="card" checked> 💳 Картаар</label><label><input type="radio" name="pay" value="cash"> 💵 Бэлнээр</label><label><input type="radio" name="pay" value="transfer"> 🏦 Дансаар</label></div>
+    <div class="row total"><span>Төлөх дүн:</span><strong id="orderTotal">0 ₮</strong></div>
+    <button class="btn btn-primary btn-block" type="submit">Захиалга баталгаажуулах ✅</button></form>
+</div>
+<div class="toast-wrap" id="toastWrap" aria-live="polite"></div>
+<script src="script.js"></script>
+</body>
+</html>
